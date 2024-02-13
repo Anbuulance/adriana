@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css" >
+    <style>
+        @keyframes shrinkAnimation {
+            0% {
+                transform: scale(1); 
+            }
+            100% {
+                transform: scale(0); 
+            }
+        }
+
+        .shrink {
+            animation: shrinkAnimation 1s forwards; 
+        }
+
+        #message {
+            display: none; /* Masquer le texte par défaut */
+        }
+    </style>
+</head>
+<body > <!-- Ajouter la classe center au body -->
+    <h1>Bienvenue, Adriana Humbert!</h1> <br>
+    <p>j'espère que tout ce déroule bien pendant tes vacances. <br>
+        Voici une petite surprise pour cette date particulière (hehehehehe)
+    </p> 
+    <img src="9b19f56a-4327-4972-b9ad-122525f908ca.jfif">
+    <br>
+    <H2>Will you be my Valentine?</H2>
+    <div class="center">
+        <button id="oui">Oui</button>
+        <button id="non">Non</button>
+    </div>
+    <!-- Affichage du texte "je t'aime" lorsque le bouton "Oui" est cliqué -->
+    <p id="message" style="text-align: center; color: #ff8fab; font-size: 24px;">Je t'aime</p>
+    <!-- Ajout de l'image avec un id -->
+    <img id="image" style="display: none;"> 
+    
+    <script>
+        var boutonNon = document.getElementById("non");
+        boutonNon.addEventListener("click", function() {
+            boutonNon.classList.add("shrink");
+        });
+        var boutonOui = document.getElementById("oui");
+        boutonOui.addEventListener("click", function() {
+            document.getElementById("message").style.display = "block"; // Afficher le texte "je t'aime"
+            document.getElementById("image").src = "Pompompurin.jfif"; // Définir la source de l'image
+            document.getElementById("image").style.display = "block"; // Afficher l'image
+        });
+    </script>
+    </script>
+</body>
+</html>
